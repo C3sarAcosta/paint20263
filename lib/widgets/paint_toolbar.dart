@@ -50,6 +50,20 @@ class PaintToolbar extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 8),
+            Row(
+              children: [
+                const Icon(Icons.brush, size:  18,),
+                Expanded(
+                  child: Slider(
+                    value: selectedWidth,
+                    min: 1.0,
+                    max: 20.0,
+                    onChanged: onWidthChanged,
+                  ),
+                ),
+                Text("${selectedWidth.toStringAsFixed(1)} px"),
+              ],
+            )
           ],
         ),
       ),
